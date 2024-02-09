@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main(){
+    int a,b,add, sub, mul, div;
+    char sign;
+    
+    printf("enter the number:\n");
+    scanf("%d%d",&a,&b);
+     fflush(stdin);
+    printf("Enter The operator:");
+    scanf("%c",&sign);
+    add=a+b;
+    sub=a-b;
+    mul=a*b;
+    div=a/b;
+    if (sign == '+'){
+        printf("%d", add);
+    }
+    else if (sign=='-'){
+        printf("%d", sub);
+    }
+    else if (sign=='*'){
+        printf("%d",mul);
+    }
+    else{
+        printf("%d", div);
+    }
+    return 0;
+}
+
