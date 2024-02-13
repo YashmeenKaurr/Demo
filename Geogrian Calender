@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main(){
+	int input_year,diff,non_leap_year,total_days,leap_year;
+	printf("Enter any Year\n");
+	scanf("%d",&input_year);
+	diff=input_year-2001;
+	leap_year=diff/4;
+	non_leap_year=diff-leap_year;
+	total_days=365*non_leap_year + leap_year*366 + 1;
+	printf("%d\n",total_days);
+	total_days=(total_days)%7;
+	printf("%d\n",total_days);
+	switch (total_days){
+		case 1:
+		printf("the input year first day is monday");
+		break;
+		case 2:
+		printf("the input year first day is tuesday");
+		break;
+		case 3:
+		printf("the input year first day is wednesday");
+		break;
+		case 4:
+		printf("the input year first day is thurday");
+		break;
+		case 5:
+		printf("the input year first day is friday");
+		break;
+		case 6:
+		printf("the input year first day is saturday");
+		break;
+		case 0:
+		printf("the input year first day is sunday");
+		break;
+		
+	}
+}
